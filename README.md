@@ -13,7 +13,7 @@ Cinnamon audio player relies on the html <audio> tag to create a player with its
     <!-- Insert Cinnamon audio player css and fonts here -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="Cinnamon.css">
+    <link rel="stylesheet" href="cinnamon.css">
     <!-- End -->
     ...
   </head>
@@ -31,7 +31,7 @@ Cinnamon audio player relies on the html <audio> tag to create a player with its
     <!-- End -->
     ...
     <!-- Call up Cinnamon audio player scripts here -->
-    <script src="Cinnamon.js"></script>
+    <script src="cinnamon.js"></script>
     <!-- End -->
   ...
   </body>
