@@ -1,0 +1,96 @@
+* {
+  box-sizing: border-box;
+}
+html, body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: ghostwhite;
+}
+.container {
+  font-family: "Open Sans";
+  width: 90%;
+  padding: 2em;
+  margin:auto;
+  background-color: white;
+  box-shadow: 0 0 2px 0 #aaa;
+  margin-bottom: 1em;
+}
+h1 a {
+  color: #666;
+  font-weight: 700;
+  text-decoration: none;
+}
+h1 small {
+  color: #666;
+  font-weight: 300;
+  padding-left: .3em;
+}
+h2 {
+  color: #666;
+  font-weight: 400;
+}
+.chapo {
+  color: #666;
+  font-weight: 600;
+}
+p {
+  font-weight: 400;
+  color: #666;
+}
+p a {
+  color: #08a;
+  text-decoration: underline;
+}
+p a:hover {
+  text-decoration: none;
+}
+p strong {
+  font-weight: 600;
+}
+ul li {
+  font-weight: 400;
+  color: #666;
+}
+.footer {
+  font-family: "Open Sans";
+  text-align: center;
+  margin-top: 2em;
+  margin-bottom: 6em;
+}
+.download {
+  font-family: "Open Sans";
+  width: 90%;
+  padding: 2em;
+  margin:auto;
+  background-color: white;
+  box-shadow: 0 0 2px 0 #aaa;
+  margin-bottom: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 1em;
+}
+.download a {
+  width: 3em;
+  height: 3em;
+  margin-right: .5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #aaa;
+  border: 1px solid #eee;
+  background: ghostwhite;
+  box-shadow: 0 0 2px 0 #aaa;
+  transition: all 1s ease;
+}
+.download a:hover {
+  color: #666;
+}
+.download a:last-child {
+  margin-right: 0;
+}
+.download a i {
+  font-size: 2em;
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Cinamon</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="prism.css">
+
+    <!-- Insert Cinamon css and fonts here or include them in the project -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="cinamon.css">
+    <!-- End -->
+
+  </head>
+  <body>
+    <div class="container">
+      <h1><a href="/">Cinamon</a><small>audio player</small></h1>
+      <p class="chapo">A nice lightweight nifty HTML5 & Javascript audio player that helps you <em>pimp</em> your web sites in a reasonable manner.</p>
+    </div>
+    <div class="download">
+      <a href="#" title="frok me on github"><i class="fa fa-github"></i></a>
+      <a href="#" title="zip"><i class="fa fa-file-archive-o"></i></a>
+      <a href="#" title="tar.gz"><i class="fa fa-file-archive-o"></i></a>
+    </div>
+    <div class="container">
+      <h2>Usage</h2>
+      <p>Cinamon audio player relise on the html <strong>&lt;audio&gt;</strong> tag to create a player with its features. It is easy yo setup in 3 steps: all you have to do is to copy the files in your project directory and setup the proper tags. First include the fonts in your html head then import Cinamon's CSS file. Then create an audio tag with as many sources as you want. Don't forget to feel Cinamon's custom attributes (<a href="#additional-settings">see additional settings</a>). Finally call up Cinamon's scripts before closing your body tag. Nothing more, your player is fixed down the page.</p>
+      <pre><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    ...
+    &lt;!-- Insert Cinamon audio player css and fonts here --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css&quot;&gt;
+    &lt;link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;cinamon.css&quot;&gt;
+    &lt;!-- End --&gt;
+    ...
+  &lt;/head&gt;
+  &lt;body&gt;
+  ...
+    &lt;!-- Insert your audio tag (only 1 per page) somewhere in your body --&gt;
+    &lt;audio&gt;
+      &lt;source file-thumb=&quot;album-01.jpg&quot; file-name=&quot;Track 01&quot; file-author=&quot;Author 01&quot; src=&quot;demo1.mp3&quot; type=&quot;audio/mpeg&quot;&gt;
+      &lt;source file-thumb=&quot;album-03.jpg&quot; file-name=&quot;Track 02&quot; file-author=&quot;Author 02&quot; src=&quot;demo2.mp3&quot; type=&quot;audio/mpeg&quot;&gt;
+      &lt;source file-thumb=&quot;album-01.jpg&quot; file-name=&quot;Track 03&quot; file-author=&quot;Author 03&quot; src=&quot;demo3.mp3&quot; type=&quot;audio/mpeg&quot;&gt;
+      &lt;source file-thumb=&quot;album-03.jpg&quot; file-name=&quot;Track 04&quot; file-author=&quot;Author 04&quot; src=&quot;demo4.mp3&quot; type=&quot;audio/mpeg&quot;&gt;
+      &lt;source file-thumb=&quot;album-01.jpg&quot; file-name=&quot;Track 05&quot; file-author=&quot;Author 05&quot; src=&quot;acdc.ogg&quot; type=&quot;audio/ogg&quot;&gt;
+      Your browser does not support the audio element.
+    &lt;/audio&gt;
+    &lt;!-- End --&gt;
+    ...
+    &lt;!-- Call up Cinamon audio player scripts here --&gt;
+    &lt;script src=&quot;cinamon.js&quot;&gt;&lt;/script&gt;
+    &lt;!-- End --&gt;
+  ...
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    <h2 id="additional-settings">Additional settings</h2>
+    <p>Cinamon uses custom attributes to display each song's features. You can easily customize your player through them:</p>
+      <ul>
+        <li>file-thumb: the url of the album's thumbnail</li>
+        <li>file-name: the title displayed on the player</li>
+        <li>file-author: the author of the track</li>
+      </ul>
+    <p>Don't let them blank. They will be used to pimp the interface on each song's change.</p>
+    <pre><code class="language-markup">&lt;audio&gt;
+  &lt;source file-thumb=&quot;album-01.jpg&quot; file-name=&quot;Track 01&quot; file-author=&quot;Author 01&quot; src=&quot;demo1.mp3&quot; type=&quot;audio/mpeg&quot;&gt;
+  ...
+&lt;/audio&gt;</code></pre>
+    </div>
+    <div class="container">
+      <h2>CSS rules</h2>
+      <p>In order to function properly, Cinamon's needs some CSS directives to be set on. Whatever is your setup for your project make sure you have the following going on.</p>
+<pre><code class="language-css">* {
+  box-sizing: border-box;
+}
+html, body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}</code></pre>
+    </div>
+    <div class="container">
+      <p>Tested on Chromium Browser Version 44.0.2 & Mozilla Firefox Version 40.0.3</p>
+    </div>
+    <div class="footer">
+      <p>Copyright (c) 2015 Adil Benseddik, (<a href="https://opensource.org/licenses/MIT">MIT license</a>)</p>
+    </div>
+    <audio>
+      <source file-thumb="album-01.jpg" file-name="Track 01" file-author="Author 01" src="demo1.mp3" type="audio/mpeg">
+      <source file-thumb="album-03.jpg" file-name="Track 02" file-author="Author 02" src="demo2.mp3" type="audio/mpeg">
+      <source file-thumb="album-01.jpg" file-name="Track 03" file-author="Author 03" src="demo3.mp3" type="audio/mpeg">
+      <source file-thumb="album-03.jpg" file-name="Track 04" file-author="Author 04" src="demo4.mp3" type="audio/mpeg">
+      <source file-thumb="album-01.jpg" file-name="Track 05" file-author="Author 05" src="acdc.ogg" type="audio/ogg">
+      Your browser does not support the audio element.
+    </audio>
+
+    <!-- Call up Cinamon audio player scripts here -->
+    <script src="cinamon.js"></script>
+    <!-- end -->
+
+    <script src="prism.js"></script>
+  </body>
+</html>
