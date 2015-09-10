@@ -2,7 +2,7 @@
 A nice lightweight nifty HTML5 &amp; Javascript audio player that helps you pimp your web sites in a reasonable manner.
 
 ## Usage
-Cinnamon audio player relise on the html <audio> tag to create a player with its features. It is easy yo setup in 3 steps: all you have to do is to copy the files in your project directory and setup the proper tags. First include the fonts in your html head then import Cinnamon's CSS file. Then create an audio tag with as many sources as you want. Don't forget to feel Cinnamon's custom attributes (see additional settings). Finally call up Cinnamon's scripts before closing your body tag. Nothing more, your player is fixed down the page.
+Cinnamon audio player relies on the html <audio> tag to create a player with its features. It is easy yo setup in 3 steps: all you have to do is to copy the files in your project directory and setup the proper tags. First include the fonts in your html head then import Cinnamon's CSS file. Then create an audio tag with as many sources as you want. Don't forget to fill Cinnamon's custom attributes (see additional settings). Finally call up Cinnamon's scripts before closing your body tag. Nothing more, your player is fixed down the page.
 
 ```html
 <!DOCTYPE html>
