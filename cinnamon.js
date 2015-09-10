@@ -63,7 +63,7 @@ audioPlayer.prev = function(){
 
 audioPlayer.init = function(){
   var warpper = document.createElement("DIV");
-  warpper.classList.add("cinamon");
+  warpper.classList.add("cinnamon");
 
   var container = document.createElement("DIV");
   container.classList.add("audio-player");
