@@ -68,3 +68,4 @@ html, body {
   padding: 0;
 }
 ```
+Tested on Chromium Browser Version 44.0.2 & Mozilla Firefox Version 40.0.3 & Midori 0.4.3
