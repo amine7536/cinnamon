@@ -127,6 +127,7 @@ audioPlayer.init = function(){
 
   var volume = document.createElement("DIV");
   volume.classList.add("audio-control-button");
+  volume.classList.add("audio-control-volume");
   volume.onmouseover = function(){
     document.querySelector(".audio-slider-container").classList.toggle("audio-control-hide");
   };
@@ -241,7 +242,7 @@ audioPlayer.initPlaylist = function(){
 
 audioPlayer.initPlaylist();
 
-audioPlayer.audio.onplay = function(){
+audioPlayer.audio.addEventListener("play", function(){
   document.querySelector(".audio-control-title").innerHTML = audioPlayer.onAir();
   document.querySelectorAll(".audio-control-song span:nth-child(4)")[audioPlayer.current].innerHTML = audioPlayer.formatTime(audioPlayer.audio.duration);
   var songs = document.querySelectorAll(".audio-control-song");
@@ -249,50 +250,52 @@ audioPlayer.audio.onplay = function(){
     songs[i].classList.remove("audio-control-selected");
   };
   songs[audioPlayer.current].classList.add("audio-control-selected");
-};
+}, false);
 
-audioPlayer.audio.onloadedmetadata = function(){
+audioPlayer.audio.addEventListener("loadedmetadata", function(){
   document.querySelector(".audio-control-timer").innerHTML = audioPlayer.formatTime(audioPlayer.audio.duration);
   document.querySelectorAll(".audio-control-song span:nth-child(4)")[audioPlayer.current].innerHTML = audioPlayer.formatTime(audioPlayer.audio.duration);
-};
+}, false);
 
-audioPlayer.audio.ontimeupdate = function(){
+audioPlayer.audio.addEventListener("timeupdate", function(){
   var progress = audioPlayer.audio.currentTime / audioPlayer.audio.duration * 100;
   document.querySelector(".audio-control-progress").style.width = progress + "%";
   document.querySelector(".audio-control-timer").innerHTML = audioPlayer.formatTime(audioPlayer.audio.currentTime) + " (" + Math.floor(progress) + "%) " + audioPlayer.formatTime(audioPlayer.audio.duration);
   document.querySelector(".audio-control-img").src = audioPlayer.audio.children[audioPlayer.current].getAttribute("file-thumb");
-};
+}, false);
 
-audioPlayer.audio.onended = function(){
+audioPlayer.audio.addEventListener("ended", function(){
   audioPlayer.next();
-};
+}, false);
 
-document.querySelector(".audio-control-display").onclick = function(e){
+document.querySelector(".audio-control-display").addEventListener("click", function(e){
   var position = (e.pageX - this.offsetLeft) / this.offsetWidth;
   audioPlayer.audio.currentTime = audioPlayer.audio.duration * position;
-};
+}, false);
 
-document.querySelector(".audio-control-display").onmousemove = function(e){
+document.querySelector(".audio-control-display").addEventListener("mousemove", function(e){
   var position = (e.pageX - this.offsetLeft) / this.offsetWidth;
   document.querySelector(".audio-control-seeker").style.display = "flex";
+  document.querySelector(".audio-control-seeker").style.display = "-webkit-flex";
   document.querySelector(".audio-control-seeker").style.width = position * 100 + "%";
   document.querySelector(".audio-control-tooltip span").innerHTML = audioPlayer.formatTime(audioPlayer.audio.duration * position);
   document.querySelector(".audio-control-tooltip").style.left = e.pageX + "px";
   document.querySelector(".audio-control-tooltip").style.display = "flex";
-};
+  document.querySelector(".audio-control-tooltip").style.display = "-webkit-flex";
+}, false);
 
-document.querySelector(".audio-control-display").onmouseout = function(){
+document.querySelector(".audio-control-display").addEventListener("mouseout", function(){
   document.querySelector(".audio-control-seeker").style.display = "none";
   document.querySelector(".audio-control-tooltip").style.display = "none";
-};
+}, false);
 
-document.querySelector(".audio-control-slider").onchange = function(){
+document.querySelector(".audio-control-slider").addEventListener("change", function(){
   audioPlayer.volume(this.value);
-};
+}, false);
 
-document.querySelector(".audio-control-slider").oninput = function(){
+document.querySelector(".audio-control-slider").addEventListener("input", function(){
   audioPlayer.volume(this.value);
-};
+}, false);
 
 audioPlayer.mini = false;
 

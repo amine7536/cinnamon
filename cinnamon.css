@@ -11,6 +11,7 @@
   position: absolute;
   bottom: 0;
   display: flex;
+  display: -webkit-flex;
   align-items: center;
   overflow: hidden;
   box-shadow: 0 0 2px 0 black;
@@ -19,11 +20,15 @@
 .audio-control-button {
   height: 3em;
   width: 3em;
+  min-width: 50px;
   background-color: black;
   color: white;
   display: flex;
+  display: -webkit-flex;
   align-items: center;
   justify-content: center;
+  -webkit-align-items: center;
+  -webkit-justify-content: center;
   cursor: pointer;
 }
 .audio-control-display {
@@ -78,6 +83,7 @@
   align-items: center;
   justify-content: center;
   transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%, 0);
   opacity: .7;
 }
 .audio-control-tooltip span {
@@ -95,18 +101,21 @@
   font-size: 1em;
   z-index: 3;
   position: fixed;
-  width: 3em;
   right: 5em;
   bottom: 3em;
   display: flex;
+  display: -webkit-flex;
   justify-content: center;
   align-items: center;
+  -webkit-justify-content: center;
+  -webkit-align-items: center;
   padding: 1em;
   background: black;
   box-shadow: 0 0 2px 0 black;
 }
 .audio-control-slider {
   -webkit-appearance: slider-vertical;
+  width: 1em;
   outline: none;
   height: auto;
 }
@@ -119,6 +128,7 @@
   bottom: 3em;
   background: white;
   overflow-y: scroll;
+  overflow-x: hidden;
   opacity: .9;
   box-shadow: 0 0 2px 0 black;
 }
@@ -126,10 +136,14 @@
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
+  display: -webkit-flex;
+  justify-content: -webkit-flex-start;
+  align-items: -webkit-flex-start;
   width: 100%;
   padding: .5em;
   cursor: pointer;
   border-bottom: 1px solid #ccc;
+  margin: 0;
 }
 .audio-control-selected {
   font-weight: 700;
@@ -162,17 +176,18 @@
   padding-right: 2em;
 }
 .audio-control-thumb {
-  height: 100%;
+  height: 3em;
   width: 3em;
-  background: pink;
+  min-width: 50px;
 }
 .audio-control-img {
-  height: 100%;
+  height: 3em;
   width: 3em;
 }
 .audio-control-minif {
   width: 2em;
   background: #666666;
+  min-width: 25px;
 }
 .audio-control-hide {
   display: none;
@@ -185,4 +200,18 @@
   top: 0;
   z-index: 4;
   opacity: .7;
+}
+@media screen and (max-width: 500px) {
+  .audio-player {
+    min-width: 500px;
+  }
+  .audio-control-minif {
+      display: none;
+  }
+  .audio-control-volume {
+    display: none;
+  }
+  .audio-control-thumb {
+    display: none;
+  }
 }
