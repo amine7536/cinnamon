@@ -47,6 +47,7 @@
   color: white;
   float: left;
   z-index: 2;
+  overflow: hidden;
 }
 .audio-control-progress {
   position: absolute;
@@ -160,6 +161,7 @@
 }
 .audio-control-song span:nth-child(2) {
   width: 60%;
+  overflow: hidden;
 }
 .audio-control-song:hover span:nth-child(2)::after {
   content:"\f028";
@@ -212,6 +214,15 @@
     display: none;
   }
   .audio-control-thumb {
+    display: none;
+  }
+  .audio-slider-container {
+    display: none;
+  }
+  .audio-control-song span:nth-child(1) {
+    display: none;
+  }
+  .audio-control-song span:nth-child(4) {
     display: none;
   }
 }
