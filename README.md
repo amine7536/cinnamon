@@ -68,4 +68,4 @@ html, body {
   padding: 0;
 }
 ```
-Tested on Chromium Browser Version 44.0.2 & Mozilla Firefox Version 40.0.3 (checkout midori's branch for Safari fixes)
+Tested on Chromium Browser Version 44.0.2 & Mozilla Firefox Version 40.0.3 (checkout Midori's branch for Safari fixes)
