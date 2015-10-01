@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <style>
+    * {  box-sizing: border-box; }
+    html, body {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    </style>
+
+    <!-- Insert Cinamon audio player css and fonts here -->
+    <link rel="stylesheet" href="../bower_components/font-awesome/css/font-awesome.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/cinnamon.css">
+    <!-- End -->
+
+  </head>
+  <body>
+
+    <!-- Insert your audio tag (only 1 per page) somewhere in your body -->
+    <audio>
+      <source file-thumb="artwork/album-01.jpg" file-name="Track 01" file-author="Author 01" src="audio/demo1.mp3" type="audio/mpeg">
+      <source file-thumb="artwork/album-02.jpg" file-name="Track 02" file-author="Author 02" src="audio/demo2.mp3" type="audio/mpeg">
+      <source file-thumb="artwork/album-03.jpg" file-name="Track 03" file-author="Author 03" src="audio/demo3.mp3" type="audio/mpeg">
+      <source file-thumb="artwork/album-04.jpg" file-name="Track 04" file-author="Author 04" src="audio/demo4.mp3" type="audio/mpeg">
+      <source file-thumb="artwork/album-05.jpg" file-name="Track 05" file-author="Author 05" src="audio/acdc.ogg" type="audio/ogg">
+      Your browser does not support the audio element.
+    </audio>
+    <!-- End -->
+
+    <!-- Call up Cinamon audio player scripts here -->
+    <script src="cinnamon.js"></script>
+    <!-- End -->
+
+  </body>
+</html>
